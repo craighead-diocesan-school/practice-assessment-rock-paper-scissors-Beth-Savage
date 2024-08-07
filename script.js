@@ -10,6 +10,7 @@ function paperScissorsRock() {
     let index = Math.floor(Math.random() * 3)
     computersChoice = answerOptions[index]
     usersChoice = prompt("Input your choice of paper, scissors or rock")
+    usersChoice = usersChoice.toLowerCase()
     alert("I chose: " + computersChoice + " You chose: " + usersChoice)
     if (computersChoice == usersChoice) {
       alert("It was a tie, we will try again")
