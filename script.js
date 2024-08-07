@@ -13,9 +13,11 @@ function paperScissorsRock() {
     //The computer picks a random output from the array above
     let index = Math.floor(Math.random() * 3)
     computersChoice = answerOptions[index]
-    //Askes the user what they want to play and turnsi it into a lower case to prevent errors in the code
+    //Askes the user what they want to play and turnsi it into a lower case and extracts any spaces before or after the input to prevent errors in the code
     usersChoice = prompt("Input your choice of paper, scissors or rock")
     usersChoice = usersChoice.toLowerCase()
+    usersChoice = usersChoice.trim()
+    //Simply outputs the users and computers choices
     alert("I chose: " + computersChoice + " You chose: " + usersChoice)
     //Compares the users and computers input and outputs a message accordingly then adds a number to the score and the round counter. If there is a tie or something goes wrong then there will be nothing added to the round counter or the scores
     if (computersChoice == usersChoice) {
