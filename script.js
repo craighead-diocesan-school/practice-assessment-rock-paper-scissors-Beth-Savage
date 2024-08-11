@@ -42,6 +42,6 @@ function paperScissorsRock() {
   } else if (computerScore < usersScore) {
     alert("You won, play again?")
   } else if (computerScore == usersScore) {
-    alert("It ended in a tie")
+    alert("It ended in a tie.")
   }
 }
