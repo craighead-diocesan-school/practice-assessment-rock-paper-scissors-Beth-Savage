@@ -1,7 +1,9 @@
+let gameScoreboard = []
 function paperScissorsRock() {
   //Gives options for the computer to use and outputs the purpose of the code
   let answerOptions = ["rock", "paper", "scissors"]
-  alert("We are going to play paper scissors rock. We will do best out of 3")
+  let usersName = prompt("Hello what is you name")
+  alert("We are going to play paper scissors rock. We will do best out of 3. Good luck " + usersName)
   //Creates the variables and there values before they come up and are changed in later code
   let roundNumber = 1
   let computersChoice = ""
@@ -18,7 +20,7 @@ function paperScissorsRock() {
     usersChoice = usersChoice.toLowerCase()
     usersChoice = usersChoice.trim()
     //Simply outputs the users and computers choices
-    if (usersChoice != "stop") {
+    if (usersChoice != "stop" && answerOptions.includes(usersChoice)) {
       alert("I chose: " + computersChoice + " You chose: " + usersChoice)
     }
     //Compares the users and computers input and outputs a message accordingly then adds a number to the score and the round counter. If there is a tie or something goes wrong then there will be nothing added to the round counter or the scores
@@ -39,9 +41,15 @@ function paperScissorsRock() {
   //Compares the scores and outputs who won with a small message
   if (computerScore > usersScore) {
     alert("I won, good game")
+    gameScoreboard.push(" Winner: Computer")
   } else if (computerScore < usersScore) {
     alert("You won, play again?")
+    gameScoreboard.push(" Winner: " + usersName)
   } else if (computerScore == usersScore) {
     alert("It ended in a tie.")
   }
+}
+
+function scoreboard() {
+  alert(gameScoreboard)
 }
