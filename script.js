@@ -2,7 +2,7 @@ let gameScoreboard = []
 function paperScissorsRock() {
   //Gives options for the computer to use and outputs the purpose of the code
   let answerOptions = ["rock", "paper", "scissors"]
-  let usersName = prompt("Hello what is you name")
+  let usersName = prompt("Hello what is your name")
   alert("We are going to play paper scissors rock. We will do best out of 3. Good luck " + usersName)
   //Creates the variables and there values before they come up and are changed in later code
   let roundNumber = 1
